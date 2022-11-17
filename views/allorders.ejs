@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms and Validations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/form.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet"> 
+    <style>
+        table{
+            width: 100%;
+        }
+        main{
+            width: 1000px;
+        }
+      </style>
+</head>
+<body>
+    <main>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Postcode</th>
+                <th>City</th>
+                <th>Province</th>
+                <th>Cap Quantity</th>
+                <th>Shoe Quantity</th>
+                <th>Sunglass Quantity</th>
+                <th>Watch Quantity</th>
+                <th>TotalCost</th>
+                <th>SubTotal</th>
+            </tr>
+    
+            <%
+            for(var order of orders){        
+            %>
+            <tr>
+                <td><%= order._id %></td>            
+                <td><%= order.name %></td>
+                <td><%= order.email %></td>
+                <td><%= order.phone %></td>
+                <td><%= order.address %></td>
+                <td><%= order.postcode %></td>
+                <td><%= order.city %></td>
+                <td><%= order.province %></td>
+                <td><%= order.itemCap %></td>
+                <td><%= order.itemShoe %></td>
+                <td><%= order.itemSunglass %></td>
+                <td><%= order.itemWatch %></td>
+                <td><%= order.totalcost %></td>
+                <td><%= order.subTotal %></td>
+                
+            </tr>
+            <%
+        }
+        %>
+        </table>
+    
+      </main>
+</body>
+</html>

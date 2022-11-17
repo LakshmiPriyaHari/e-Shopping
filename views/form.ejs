@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms and Validations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/form.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+  <form name="myform" method="Post" onsubmit="return formSubmit();"  action="" >
+  <section class="items grid1">
+    <div class="cards">     
+      <img src="images/cap.jpg" alt="cap">
+      <!--cap.jpg from pexels [February 5th, 2018] https://www.pexels.com/photo/gray-and-black-la-embroidered-fitted-cap-844867/--> 
+      <h2>Cap ($10)</h2> 
+      <input id="itemCap" placeholder="Quantity" type="number" name="itemCap">    
+    </div>
+    <div class="cards">     
+      <img src="images/shoes.jpg" alt="shoes">
+      <!--shoes.jpg from pexels [November 25th,2025] https://www.pexels.com/photo/pair-of-blue-lace-up-sneakers-19090/-->
+      <h2>Shoes ($50)</h2>
+      <input id="itemShoe" placeholder="Quantity" type="number" name="itemShoe"> 
+    </div>
+    <div class="cards">      
+      <img src="images/sunglass.jpg" alt="sunglass">
+      <!--sunglass.jpg from pexels [February 14th,2016] https://www.pexels.com/photo/red-lens-sunglasses-on-sand-near-sea-at-sunset-selective-focus-photography-46710/-->
+      <h2>Sunglass ($30)</h2>
+      <input id="itemSunglass" placeholder="Quantity" type="number" name="itemSunglass"> 
+    </div>
+    <div class="cards">      
+      <img src="images/watch.jpg" alt="watch">
+      <!--watch.jpg from pexels [July 21st,2016] https://www.pexels.com/photo/black-leather-strap-silver-chronograph-watch-125779/-->
+      <h2>Watch ($100)</h2>
+      <input id="itemWatch" placeholder="Quantity" type="number" name="itemWatch">
+    </div>
+  </section>
+  <section class="userdetails">
+    
+      <label>Name</label>
+      <input id="name" placeholder="First Last" type="text" name="name"><br/>
+
+      <label>Email</label>
+      <input id="email" placeholder="email@domain.com" type="text" name="email"><br/>
+
+      <label>Phone</label>
+      <input id="phone" placeholder="1231231234" type="phone" name="phone"><br/>
+
+      <label>Address</label>
+      <input id="address" placeholder="Street" type="text" name="address"><br/>
+
+      <label>Post Code</label>
+      <input id="postcode" placeholder="X9X 9X9" type="postcode" name="postcode"><br/>
+
+      <label>City</label>
+      <input id="city" placeholder="city" type="text" name="city"><br/>
+                
+      <label>Province</label>
+      <select name="province" id="province">
+          <option value=""> Select </option>
+          <option value="alberta">Alberta</option>
+          <option value="britishcolumbia">British Columbia</option>
+          <option value="manitoba">Manitoba</option>
+          <option value="newbrunswick">New Brunswick</option>
+          <option value="newfoundlandlabrador">Newfoundland and Labrador</option>
+          <option value="northwestterritories">Northwest Territories</option>
+          <option value="novascotia">Nova Scotia</option>
+          <option value="nunavut">Nunavut</option>
+          <option value="ontario">Ontario</option>
+          <option value="quebec">Quebec</option>
+          <option value="princeedwardisland">Prince Edward Island</option>
+          <option value="saskatchewan">Saskatchewan</option>
+          <option value="yukon">Yukon</option>
+      </select>
+
+      <br/><br/>
+
+      <input type="submit" value="Checkout">
+      <p id="errors">
+        <%
+          if(typeof(errors) != 'undefined'){
+            for(var error of errors){ 
+              %>
+              <%= error.msg %> <br>
+              <%
+            }
+          }
+        %>
+      </p>
+     
+</section>
+</form> 
+<section class="w50">
+  <div class="formData">
+    <p id="formResult">
+      Receipt <br><br>
+      <%
+     if(typeof(name) != 'undefined' && totalcost>0)
+     {
+      %>       
+          <b>Name: </b> <%= name %> <br> 
+          <b>Email: </b> <%= email %> <br> 
+          <b>Phone: </b> <%= phone %> <br> 
+          <b>Address: </b> <%= address %> <br> 
+          <b>City: </b> <%= city %> <br> 
+          <b>Province: </b> <%= province %> <br> 
+          <b>Quantity of Cap: </b> <%= itemCap %> <br>
+          <b>Quantity of Shoes: </b> <%= itemShoe %> <br>
+          <b>Quantity of Sunglass: </b> <%= itemSunglass %> <br>
+          <b>Quantity of Watch: </b> <%= itemWatch %> <br>
+          <b>Totalcost: </b> <%= totalcost %> <br> 
+          <b>Subtotal: </b> <%= subTotal %> <br> 
+
+          <%
+     }
+
+     
+     else
+     {
+        %>
+        <p>The customer should select atleast 1 product</p>
+        <%
+     } 
+     %>
+    
+    </p>
+  </div>
+</section>
+<div class="clear"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms and Validations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/form.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+    <main>
+        <h1>Receipt</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="/allorders">All Cards</a>
+            </li>
+          </ul>
+        </nav>
+        <section>
+            <div class="cardData">              
+              <table>
+                <tr>
+                  <th>Name: </th>
+                  <td><%= name %></td>
+                </tr>
+                <tr>
+                  <th>Email: </th>
+                  <td><%= email %></td>
+                </tr>
+                <tr>
+                  <th>Phone: </th>
+                  <td><%= phone %></td>
+                </tr>
+                <tr>
+                    <th>Address: </th>
+                    <td><%= address %></td>
+                  </tr>
+                  <tr>
+                    <th>Postcode: </th>
+                    <td><%= postcode %></td>
+                  </tr>
+                  <tr>
+                    <th>City: </th>
+                    <td><%= city %></td>
+                  </tr>
+                  <tr>
+                    <th>Province: </th>
+                    <td><%= province %></td>
+                  </tr>
+                  <tr>
+                    <th>Cap Quantity: </th>
+                    <td><%= itemCap %></td>
+                  </tr>
+                  <tr>
+                    <th>Shoe Quantity: </th>
+                    <td><%= itemShoe %></td>
+                  </tr>
+                  <tr>
+                    <th>Sunglass Quantity: </th>
+                    <td><%= itemSunglass %></td>
+                  </tr>
+                  <tr>
+                    <th>Watch Quantity: </th>
+                    <td><%= itemWatch %></td>
+                  </tr>
+                  <tr>
+                    <th>Total cost: </th>
+                    <td><%= totalcost %></td>
+                  </tr>
+                  <tr>
+                    <th>SubTotal: </th>
+                    <td><%= subTotal %></td>
+                  </tr>
+              </table>              
+            </div>
+        </section>
+      </main>
+</body>
+</html>
