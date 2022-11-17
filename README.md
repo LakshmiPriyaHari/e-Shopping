@@ -1,5 +1,6 @@
 # e-Shopping
-This is an online shopping website
+This is an online shopping website which consists of items for sale and the quantity field.
+
 I have developed a web application for an Online Store. I have done server-side programming only using Express web application framework and store data into MongoDB.
 
 HTML Static Content- Web Form is used in the front end to collect all the information needed to mail out the purchased items to the customer.
