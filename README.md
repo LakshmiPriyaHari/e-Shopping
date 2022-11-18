@@ -1,5 +1,9 @@
 # e-Shopping
+
 This is an online shopping website
+
+This is an online shopping website which consists of items for sale and the quantity field.
+
 
 I have developed a web application for an Online Store. I have done server-side programming only using Express web application framework and store data into MongoDB.
 
@@ -17,7 +21,11 @@ Retrieve data from MongoDB
 
 Created a new page that fetches and shows the orders from the MongoDB database in a tabular format.
 
+
 The user interface is user friendly and easy to use. Enhancement in progress for creating a tabular format in "All Cards" section using CSS.
+
+The user interface is user friendly and easy to use. Development in progress for creating a tabular format in "All Cards" section using CSS.
+
 
 To execute the code:
 
