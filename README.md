@@ -21,12 +21,6 @@ Retrieve data from MongoDB
 
 Created a new page that fetches and shows the orders from the MongoDB database in a tabular format.
 
-
-The user interface is user friendly and easy to use. Enhancement in progress for creating a tabular format in "All Cards" section using CSS.
-
-The user interface is user friendly and easy to use. Development in progress for creating a tabular format in "All Cards" section using CSS.
-
-
 To execute the code:
 
 Open the code in Visual Studio Code
